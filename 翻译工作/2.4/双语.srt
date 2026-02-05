@@ -1,0 +1,181 @@
+1
+00:00:00,240 --> 00:00:02,214
+Stop trading stocks like your parents did.
+别再像你父母那样交易股票了。
+
+2
+00:00:02,280 --> 00:00:05,800
+What if you could trade your real world
+assets like stocks and indexes on chain?
+如果你能在链上交易股票和指数等
+现实世界资产会怎样？
+
+3
+00:00:05,866 --> 00:00:08,440
+24/7, even while Wall Street is asleep?
+7×24小时交易，即使在华尔街休市时？
+
+4
+00:00:08,633 --> 00:00:11,433
+That's exactly why crypto
+traders are moving into RWAs.
+这正是加密货币交易者
+转向RWA的原因。
+
+5
+00:00:11,760 --> 00:00:14,440
+Traders and investors don't just trade
+cryptocurrencies anymore,
+交易者和投资者不再只是
+交易加密货币，
+
+6
+00:00:14,506 --> 00:00:15,920
+they want real world exposure.
+他们想要真实世界的敞口。
+
+7
+00:00:16,267 --> 00:00:19,734
+RWAs or real world assets lets you trade
+things like stocks, indexes
+RWA（现实世界资产）让你可以交易
+股票、指数
+
+8
+00:00:19,800 --> 00:00:21,560
+and commodities without leaving crypto.
+和大宗商品，无需离开加密世界。
+
+9
+00:00:21,733 --> 00:00:25,654
+That means familiar markets,
+global access, and no TradFi gatekeepers
+这意味着熟悉的市场、
+全球访问权限，没有传统金融的看门人
+
+10
+00:00:25,720 --> 00:00:27,800
+all done easily on any Orderly powered DEX.
+所有这些都可以在任何Orderly驱动的DEX上轻松完成。
+
+11
+00:00:28,000 --> 00:00:31,814
+But here's the question that everyone asks:
+how do you trade something like Tesla
+但这里有个所有人都会问的问题：
+当股市休市时
+
+12
+00:00:31,880 --> 00:00:34,014
+on chain while the stock market is closed?
+如何在链上交易特斯拉这样的资产？
+
+13
+00:00:34,080 --> 00:00:37,894
+Orderly solves this with institutional
+price oracles for US stocks and indexes
+Orderly通过机构级价格预言机
+解决了这个问题
+
+14
+00:00:37,960 --> 00:00:40,654
+Orderly uses Pyth and Chainlink
+during normal market hours.
+在正常交易时段，Orderly使用
+Pyth和Chainlink预言机。
+
+15
+00:00:40,720 --> 00:00:43,574
+Price reflects live trading
+from exchanges like
+价格反映来自纽约证券交易所
+
+16
+00:00:43,640 --> 00:00:45,574
+New York Stock Exchange and the Nasdaq.
+和纳斯达克等交易所的实时交易。
+
+17
+00:00:45,640 --> 00:00:48,280
+But what about after hours
+when traditional markets close?
+但在传统市场收盘后
+的盘后交易时段呢？
+
+18
+00:00:48,346 --> 00:00:49,494
+Pricing doesn't stop.
+定价不会停止。
+
+19
+00:00:49,560 --> 00:00:53,360
+Orderly pulls prices from after-hour
+trading venues like Blue Ocean ATS.
+Orderly从盘后交易场所
+如Blue Ocean ATS获取价格。
+
+20
+00:00:53,720 --> 00:00:58,014
+These are real executable prices based
+on actual institutional bids and offers,
+这些是基于真实机构买卖盘的
+可执行价格，
+
+21
+00:00:58,080 --> 00:01:02,134
+so traders can still open positions,
+close positions, and manage risk,
+因此交易者仍然可以开仓、
+平仓和管理风险，
+
+22
+00:01:02,200 --> 00:01:04,033
+all while TradFi is offline.
+即使传统金融处于离线状态。
+
+23
+00:01:04,360 --> 00:01:07,560
+Instead of artificial price adjustments
+Orderly lets the market price dividends
+Orderly不做人为的价格调整，
+而是让市场自然定价股息，
+
+24
+00:01:07,626 --> 00:01:11,334
+naturally, funding rates and price
+execution adjust on their own and just
+资金费率和价格执行自行调整，
+
+25
+00:01:11,400 --> 00:01:13,400
+like any other major perpetual market.
+就像其他主要的永续合约市场一样。
+
+26
+00:01:13,480 --> 00:01:15,240
+No tricks, no surprises.
+没有花招，没有意外。
+
+27
+00:01:15,560 --> 00:01:17,094
+So why does this even matter?
+那么为什么这很重要？
+
+28
+00:01:17,160 --> 00:01:20,294
+You get real world exposure,
+on-chain transparency, and 24/7
+你获得了真实世界的敞口、
+链上透明度
+
+29
+00:01:20,360 --> 00:01:22,294
+global access to trading.
+以及7×24小时的全球交易访问。
+
+30
+00:01:22,360 --> 00:01:26,840
+Go to Orderly One today and get
+access to RWA listings instantly.
+立即访问Orderly One，
+即刻获得RWA交易对的访问权限。
