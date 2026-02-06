@@ -1,0 +1,54 @@
+1
+00:00:00,000 --> 00:00:06,000
+Welcome back to the webcast where we spotlight some of the coolest people and projects in the ecosystem and today we're joined by Ben, CMO of Raydium.
+欢迎回到我们的网络访谈，在这里我们聚焦生态系统中最酷的人物和项目，今天我们请到了Raydium的首席营销官Ben。
+
+2
+00:00:06,000 --> 00:00:15,000
+I remember going to my first Breakpoint in 2022 and the FTX collapse was happening and I looked around the room and I said, these guys are never leaving Solana.
+我记得2022年参加我的第一次Breakpoint大会，当时FTX正在崩溃，我环顾四周说，这些人永远不会离开Solana。
+
+3
+00:00:15,000 --> 00:00:18,000
+Three years ago BlackRock was like, no, no, we hate crypto.
+三年前贝莱德还在说，不不，我们讨厌加密货币。
+
+4
+00:00:18,000 --> 00:00:20,000
+It's funny how quickly the world changed.
+世界变化如此之快，真有趣。
+
+5
+00:00:20,000 --> 00:00:28,000
+So we went through this evolution of being this infrastructure provider in the background to being a full stack liquidity provider and full stack trading tool.
+我们经历了一个演变过程，从幕后的基础设施提供商，到全栈流动性提供商和全栈交易工具。
+
+6
+00:00:28,000 --> 00:00:34,000
+And a big part of that obviously was expansion to perpetuals, which is where the partnership with Orderly came in.
+其中很重要的一部分显然是扩展到永续合约，这就是我们与Orderly合作的切入点。
+
+7
+00:00:34,000 --> 00:00:36,000
+I think perps will always be interesting.
+我认为永续合约永远都会很有趣。
+
+8
+00:00:36,000 --> 00:00:42,000
+I think generally people care less about owning the asset and they want to care about having exposure to the asset.
+我认为总体上人们不太在乎拥有资产本身，他们更在乎对资产的敞口。
+
+9
+00:00:42,000 --> 00:00:50,000
+I've been in this industry for five years and these are the rooms that us crypto people were shunned in and now suddenly we got the suits in the room.
+我在这个行业待了五年，这些曾经将我们加密人拒之门外的房间，现在突然来了很多穿西装的人。
+
+10
+00:00:50,000 --> 00:00:59,000
+I think we are still in this speculative era of crypto where primarily people look at it as a way to make money and just better financial management.
+我认为我们仍然处于加密货币的投机时代，人们主要将其视为赚钱和更好地进行财务管理的方式。
+
+11
+00:00:59,000 --> 00:01:04,000
+But I think we're starting to inch towards more of the utility phase of crypto.
+但我认为我们正开始逐步迈向加密货币的实用阶段。
