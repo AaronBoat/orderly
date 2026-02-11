@@ -1,0 +1,44 @@
+1
+00:00:00,000 --> 00:00:06,000
+Welcome back to the webcast where we spotlight some of the crew's people and projects in the ecosystem and today we joined by Ben, CMO of Radium.
+
+2
+00:00:06,000 --> 00:00:15,000
+I remember going to my first breakpoint in 2022 and the FTX collapse was happening and I looked around the room and I said, these guys are never leaving Suana.
+
+3
+00:00:15,000 --> 00:00:18,000
+Three years ago BlackRock was like, no, no, we hate crypto.
+
+4
+00:00:18,000 --> 00:00:20,000
+It's funny how quickly the world changed.
+
+5
+00:00:20,000 --> 00:00:28,000
+So we went through this evolution of being this infrastructure provider in the background to being a full stack liquidity provider and full stack trading tool.
+
+6
+00:00:28,000 --> 00:00:34,000
+And a big part of that obviously was expansion to perpetuals, which is where the partnership reportedly came in.
+
+7
+00:00:34,000 --> 00:00:36,000
+I think curbs will always be interesting.
+
+8
+00:00:36,000 --> 00:00:42,000
+I think generally people care less about owning the asset and they want to care about having exposure to the asset.
+
+9
+00:00:42,000 --> 00:00:50,000
+I've been in this industry for five years and these are the rooms that us crypto people were shunned in and now suddenly we got the suits in the room.
+
+10
+00:00:50,000 --> 00:00:59,000
+I think we are still in this speculative era of crypto where primarily people look at it as a way to make money and just better financial management.
+
+11
+00:00:59,000 --> 00:01:04,000
+But I think we're starting to inch towards more of the utility phase of crypto.
+
