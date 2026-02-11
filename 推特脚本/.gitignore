@@ -1,0 +1,39 @@
+# 环境变量和敏感信息
+.env
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+env/
+.venv
+
+# 日志文件
+*.log
+cron.log
+launchd.log
+launchd.err
+
+# 已回复记录
+replied_posts.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# 测试文件
+test_*.py
+*_test.py
