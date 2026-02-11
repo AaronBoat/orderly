@@ -1,39 +1,39 @@
 {
-  "rwa_snippets": [
-    "Orderly's RWA infrastructure offers seamless tokenization of real-world assets with top-tier security",
-    "Dive into RWA with Orderly: Low fees, high liquidity, and DeFi integration",
-    "Orderly is pioneering the next generation of RWA trading with institutional-grade infrastructure",
-    "Real-world asset tokenization made simple with Orderly's cutting-edge technology",
-    "Orderly brings traditional finance and DeFi together through innovative RWA solutions"
-  ],
-  "trading_snippets": [
-    "Orderly DEX provides lightning-fast trades with AI-powered analytics",
-    "Trade smarter on Orderly: Advanced tools for DEX users",
-    "Orderly's orderbook-based DEX offers CEX-level performance with full decentralization",
-    "Experience professional trading on-chain with Orderly's institutional-grade platform",
-    "Deep liquidity, low slippage, and blazing speed – that's Orderly"
-  ],
-  "templates": [
-    "Interesting take on {topic}! We've covered similar insights in our post: {our_post_link}. Check it out for more on {snippet}. 📊",
-    "Love this discussion on {topic}. At Orderly, we're pushing boundaries with {snippet}. See our thread here: {our_post_link} 🚀",
-    "Spot on about {topic}! For anyone interested, our latest update dives deeper: {our_post_link} – {snippet}. 💡",
-    "Great perspective on {topic}. This aligns with what we're building at Orderly: {snippet}. More details: {our_post_link} ⚡",
-    "This hits the mark on {topic}. We've been working on similar ideas: {snippet}. Check out {our_post_link} for the full story! 🔥",
-    "Couldn't agree more on {topic}! At {our_account}, we're tackling this with {snippet}. Thread: {our_post_link} 👀"
-  ],
-  "our_accounts": [
-    "@OrderlyCN_",
-    "@OrderlyNetwork"
-  ],
-  "our_post_links": [
-    "https://x.com/OrderlyCN_/status/EXAMPLE1",
-    "https://x.com/OrderlyNetwork/status/EXAMPLE2",
-    "https://x.com/OrderlyCN_/status/EXAMPLE3",
-    "https://x.com/OrderlyNetwork/status/EXAMPLE4"
-  ],
-  "_instructions": {
-    "note": "请定期更新 our_post_links 为最新的推文链接",
-    "how_to_update": "将 EXAMPLE1, EXAMPLE2 等替换为实际的推文 ID",
-    "frequency": "建议每周更新一次素材，保持内容新鲜"
-  }
+    "rwa_snippets": [
+        "Orderly's RWA infrastructure offers seamless tokenization of real-world assets with top-tier security",
+        "Dive into RWA with Orderly: Low fees, high liquidity, and DeFi integration",
+        "Orderly is pioneering the next generation of RWA trading with institutional-grade infrastructure",
+        "Real-world asset tokenization made simple with Orderly's cutting-edge technology",
+        "Orderly brings traditional finance and DeFi together through innovative RWA solutions"
+    ],
+    "trading_snippets": [
+        "Orderly DEX provides lightning-fast trades with AI-powered analytics",
+        "Trade smarter on Orderly: Advanced tools for DEX users",
+        "Orderly's orderbook-based DEX offers CEX-level performance with full decentralization",
+        "Experience professional trading on-chain with Orderly's institutional-grade platform",
+        "Deep liquidity, low slippage, and blazing speed – that's Orderly"
+    ],
+    "templates": [
+        "Interesting take on {topic}! We've covered similar insights in our post: {our_post_link}. Check it out for more on {snippet}. 📊",
+        "Love this discussion on {topic}. At Orderly, we're pushing boundaries with {snippet}. See our thread here: {our_post_link} 🚀",
+        "Spot on about {topic}! For anyone interested, our latest update dives deeper: {our_post_link} – {snippet}. 💡",
+        "Great perspective on {topic}. This aligns with what we're building at Orderly: {snippet}. More details: {our_post_link} ⚡",
+        "This hits the mark on {topic}. We've been working on similar ideas: {snippet}. Check out {our_post_link} for the full story! 🔥",
+        "Couldn't agree more on {topic}! At {our_account}, we're tackling this with {snippet}. Thread: {our_post_link} 👀"
+    ],
+    "our_accounts": [
+        "@OrderlyCN_",
+        "@OrderlyNetwork"
+    ],
+    "our_post_links": [
+        "https://x.com/OrderlyCN_/status/EXAMPLE1",
+        "https://x.com/OrderlyNetwork/status/EXAMPLE2",
+        "https://x.com/OrderlyCN_/status/EXAMPLE3",
+        "https://x.com/OrderlyNetwork/status/EXAMPLE4"
+    ],
+    "_instructions": {
+        "note": "请定期更新 our_post_links 为最新的推文链接",
+        "how_to_update": "将 EXAMPLE1, EXAMPLE2 等替换为实际的推文 ID",
+        "frequency": "建议每周更新一次素材，保持内容新鲜"
+    }
 }
