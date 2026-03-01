@@ -9,7 +9,7 @@ telegram:
   
   # 目标群组 ID（中文群 - Group）
   # 格式：-100xxxxxxxxxx（超级群组/频道）
-  target_chat_id: -100xxxxxx
+  target_chat_id: -1002266428094
 
 gemini:
   # Google Gemini API Key
