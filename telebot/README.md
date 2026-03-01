@@ -36,13 +36,56 @@ pip3 install -r requirements.txt
 4. 发送 `/mybots` → 选择你的 Bot → **Bot Settings** → **Group Privacy** → **Turn off**
    - 这一步是为了让 Bot 能够读取群组消息
 
-#### 2.2 获取群组 Chat ID
+#### 2.2 将 Bot 加入群组
+
+**重要：Bot 必须在两个群组中都是管理员才能正常工作！**
+
+**方法 1：通过 Bot 用户名添加（推荐）**
+
+1. 打开你要添加 Bot 的群组
+2. 点击群组名称，进入群组信息页面
+3. 点击 **Add Members**（添加成员）或 **Administrators**（管理员）
+4. 在搜索框中输入你的 Bot 用户名（例如：`@YourBotName_bot`）
+5. 选择你的 Bot 并添加
+6. **重要：将 Bot 设为管理员**，并给予以下权限：
+   - ✅ Delete Messages（删除消息）- 可选
+   - ✅ Restrict Members（限制成员）- 可选
+   - ✅ Invite Users（邀请用户）- 可选
+   - ✅ Pin Messages（置顶消息）- 可选
+   - ✅ Manage Video Chats（管理视频聊天）- 可选
+   - **注意：Bot 默认就能读取消息和发送消息，无需特别勾选**
+
+7. 重复以上步骤，将 Bot 同时加入源群组和目标群组
+
+**方法 2：通过邀请链接**
+
+1. 在 @BotFather 中找到你的 Bot
+2. 发送 `/mybots` → 选择你的 Bot
+3. 点击 **Bot Settings** → **Inline Mode** → **Turn on**（如果需要）
+4. 在群组中直接输入 `@YourBotName_bot`，然后添加为成员
+5. 同样需要将 Bot 提升为管理员
+
+**方法 3：使用 Bot 邀请链接（适用于频道）**
+
+1. 进入频道设置
+2. 点击 **Administrators**（管理员）
+3. 点击 **Add Admin**（添加管理员）
+4. 搜索并添加你的 Bot
+5. 给予必要的权限（至少需要 **Post Messages** 权限）
+
+**验证 Bot 是否成功加入：**
+
+- 在群组中发送 `/start` 或任意消息
+- 如果 Bot 是管理员，它应该能看到所有消息
+- 查看群组成员列表，确认 Bot 在"管理员"列表中
+
+#### 2.3 获取群组 Chat ID
 
 有以下几种方法：
 
 **方法 1：使用 @userinfobot（推荐）**
 
-1. 将你的 Bot 加入到源群组和目标群组（设为管理员）
+1. 确保你的 Bot 已经加入到源群组和目标群组，并设为管理员（参考上一步）
 2. 在 Telegram 搜索 [@userinfobot](https://t.me/userinfobot)
 3. 将群组的任意消息转发给 @userinfobot
 4. Bot 会返回群组 ID（格式：`-100xxxxxxxxxx`）
@@ -70,7 +113,7 @@ async def get_chat_id():
 asyncio.run(get_chat_id())
 ```
 
-#### 2.3 获取 Gemini API Key
+#### 2.4 获取 Gemini API Key
 
 1. 访问 [Google AI Studio](https://makersuite.google.com/app/apikey)
 2. 登录你的 Google 账号
@@ -172,6 +215,10 @@ sudo systemctl status telegram-bot
    - 所有错误都会记录在日志中
 
 ## 常见问题
+
+### 如何将 Bot 加入群组？
+
+请参考 [2.2 将 Bot 加入群组](#22-将-bot-加入群组) 章节，里面有三种详细的添加方法。记得将 Bot 设为管理员！
 
 ### Bot 无法读取群组消息
 

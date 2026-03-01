@@ -1,6 +1,6 @@
 telegram:
   # 从 @BotFather 获取的 Bot Token
-  bot_token: "YOUR_BOT_TOKEN"
+  bot_token: 8728908998:AAGvP-E8Fg_QyV71CGScvl5fQXeomJFSoAU
   
   # 源群组 ID（公告群）
   # 格式：-100xxxxxxxxxx（超级群组/频道）
