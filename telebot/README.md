@@ -23,7 +23,7 @@
 ### 1. 安装依赖
 
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ### 2. 获取必要的凭证
