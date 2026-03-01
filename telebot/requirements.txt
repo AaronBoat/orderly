@@ -1,0 +1,9 @@
+# Python Telegram Bot 依赖
+python-telegram-bot==21.0
+python-telegram-bot[callback-data]==21.0
+
+# Google Gemini AI 依赖
+google-generativeai>=0.3.0
+
+# 配置文件解析
+PyYAML>=6.0

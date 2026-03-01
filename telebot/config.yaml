@@ -1,0 +1,25 @@
+telegram:
+  # 从 @BotFather 获取的 Bot Token
+  bot_token: 8728908998:AAGvP-E8Fg_QyV71CGScvl5fQXeomJFSoAU
+  
+  # 源群组 ID（公告来源 - Forum）
+  # 格式：-100xxxxxxxxxx（超级群组/频道/Forum）
+  # 获取方法：将机器人加入群组后，转发群组消息给 @userinfobot
+  source_chat_id: -1002011191127
+  
+  # 目标群组 ID（中文群 - Group）
+  # 格式：-100xxxxxxxxxx（超级群组/频道）
+  target_chat_id: -100xxxxxx
+
+gemini:
+  # Google Gemini API Key
+  # 获取地址：https://makersuite.google.com/app/apikey
+  api_key: "YOUR_GEMINI_API_KEY"
+  
+  # 使用的模型名称
+  # 推荐：gemini-2.0-flash-exp 或 gemini-1.5-flash
+  model_name: "gemini-2.0-flash-exp"
+
+settings:
+  # 目标翻译语言
+  language: "zh-CN"
