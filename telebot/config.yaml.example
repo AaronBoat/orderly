@@ -1,11 +1,19 @@
 telegram:
   # 从 @BotFather 获取的 Bot Token
-  bot_token: 8728908998:AAGvP-E8Fg_QyV71CGScvl5fQXeomJFSoAU
+  bot_token: "YOUR_BOT_TOKEN"
   
   # 源群组 ID（公告来源 - Forum）
   # 格式：-100xxxxxxxxxx（超级群组/频道/Forum）
   # 获取方法：将机器人加入群组后，转发群组消息给 @userinfobot
-  source_chat_id: -1002011191127
+  source_chat_id: -100xxxxxx
+  
+  # 只监听特定的 Forum Topic（子频道）
+  # 如果为空列表 [] 或注释掉，则监听所有消息
+  # 使用 Topic ID（数字）
+  # 运行 python3 get_topic_ids.py 可以获取 Topic ID
+  allowed_topics:
+    - 12345  # 示例：updates topic
+    - 67890  # 示例：announcements topic
   
   # 目标群组 ID（中文群 - Group）
   # 格式：-100xxxxxxxxxx（超级群组/频道）
@@ -18,7 +26,7 @@ gemini:
   
   # 使用的模型名称
   # 推荐：gemini-2.0-flash-exp 或 gemini-1.5-flash
-  model_name: "gemini-2.0-flash-exp"
+  model_name: "gemini-1.5-flash"
 
 settings:
   # 目标翻译语言

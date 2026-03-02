@@ -122,7 +122,13 @@ asyncio.run(get_chat_id())
 
 ### 3. 配置 Bot
 
-编辑 `config.yaml` 文件：
+复制配置文件模板：
+
+```bash
+cp config.yaml.example config.yaml
+```
+
+然后编辑 `config.yaml` 文件：
 
 ```yaml
 telegram:
@@ -207,8 +213,10 @@ sudo systemctl status telegram-bot
    - Gemini API：免费版每分钟 15 次请求（具体限制请查看 [Google AI Studio](https://ai.google.dev/pricing)）
 
 3. **隐私安全**：
-   - 不要将 `config.yaml` 提交到公开仓库
-   - 建议将 `config.yaml` 加入 `.gitignore`
+   - ⚠️ **重要：`config.yaml` 已在 `.gitignore` 中，不会被上传到 GitHub**
+   - 只有 `config.yaml.example` 模板会被提交到仓库
+   - 首次使用时运行 `cp config.yaml.example config.yaml` 创建配置文件
+   - 永远不要将真实的 API Key 和 Token 提交到公开仓库
 
 4. **错误处理**：
    - 如果翻译失败，Bot 会自动转发原消息
