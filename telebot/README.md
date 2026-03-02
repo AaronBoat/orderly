@@ -255,12 +255,10 @@ sudo systemctl status telegram-bot
 
 ```
 telebot/
-├── main.py                  # 主程序
-├── config.yaml              # 配置文件（不会上传到 Git）
-├── config.yaml.example      # 配置文件模板（会上传到 Git）
-├── requirements.txt         # Python 依赖
-├── .gitignore              # Git 忽略文件配置
-└── README.md               # 本文档
+├── main.py              # 主程序
+├── config.yaml          # 配置文件（需自行配置）
+├── requirements.txt     # Python 依赖
+└── README.md           # 本文档
 ```
 
 ## 技术栈

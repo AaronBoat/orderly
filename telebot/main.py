@@ -42,6 +42,12 @@ class Config:
         self.bot_token = config['telegram']['bot_token']
         self.source_chat_id = int(config['telegram']['source_chat_id'])
         self.target_chat_id = int(config['telegram']['target_chat_id'])
+        
+        # 允许的 Topic 名称或 ID（可选）
+        self.allowed_topics = config['telegram'].get('allowed_topics', [])
+        # 转换为小写以便不区分大小写匹配
+        self.allowed_topics_lower = [str(t).lower() for t in self.allowed_topics] if self.allowed_topics else []
+        
         self.gemini_api_key = config['gemini']['api_key']
         self.gemini_model = config['gemini']['model_name']
         self.language = config['settings']['language']
@@ -118,6 +124,41 @@ class TranslationBot:
             logger.debug(f"忽略非源群组消息: {message.chat_id}")
             return
         
+        # 检查是否来自允许的 Topic（如果配置了 allowed_topics）
+        if self.config.allowed_topics_lower:
+            topic_id = message.message_thread_id
+            topic_name = None
+            
+            # 尝试获取 Topic 名称
+            if topic_id:
+                try:
+                    forum_topic = await context.bot.get_forum_topic_icon_custom_emoji_stickers(
+                        chat_id=message.chat_id
+                    )
+                    # 注意：实际的 Topic 名称获取可能需要不同的方法
+                    # 这里我们主要通过 message_thread_id 来判断
+                except:
+                    pass
+            
+            # 如果设置了 allowed_topics，检查是否匹配
+            # 可以通过 Topic ID 或从消息中获取的信息来判断
+            should_process = False
+            
+            if topic_id:
+                # 如果配置中包含数字（Topic ID），进行匹配
+                if str(topic_id) in [str(t) for t in self.config.allowed_topics]:
+                    should_process = True
+                    logger.info(f"消息来自允许的 Topic ID: {topic_id}")
+            
+            # 由于无法直接获取 Topic 名称，我们记录 Topic ID 供用户参考
+            if not should_process and topic_id:
+                logger.info(f"消息来自 Topic ID: {topic_id}，但不在允许列表中，跳过")
+                logger.info(f"如需监听此 Topic，请在 config.yaml 的 allowed_topics 中添加: {topic_id}")
+                return
+            elif not should_process and not topic_id:
+                logger.info(f"消息不在任何 Topic 中，且配置了 Topic 过滤，跳过")
+                return
+        
         # 去重检查
         if message.message_id in recent_message_ids:
             logger.info(f"消息 {message.message_id} 已处理，跳过")
@@ -129,13 +170,22 @@ class TranslationBot:
         
         # 提取文本内容
         text_to_translate = None
+        has_media = False
+        
         if message.text:
             text_to_translate = message.text
         elif message.caption:
             text_to_translate = message.caption
+            has_media = True
         
+        # 如果没有文本且没有媒体，跳过
+        if not text_to_translate and not (message.photo or message.video or message.document):
+            logger.info("消息无内容，跳过")
+            return
+        
+        # 如果只有媒体没有文本，直接转发
         if not text_to_translate:
-            logger.info("消息无文本内容，直接转发")
+            logger.info("消息无文本内容，直接转发媒体")
             await self._forward_message(message, context)
             return
         
@@ -159,11 +209,36 @@ class TranslationBot:
             context: 上下文对象
         """
         try:
-            await context.bot.copy_message(
-                chat_id=self.config.target_chat_id,
-                from_chat_id=message.chat_id,
-                message_id=message.message_id
-            )
+            # 尝试不同的转发方式
+            if message.photo:
+                photo = message.photo[-1]
+                await context.bot.send_photo(
+                    chat_id=self.config.target_chat_id,
+                    photo=photo.file_id,
+                    caption=message.caption or ""
+                )
+            elif message.video:
+                await context.bot.send_video(
+                    chat_id=self.config.target_chat_id,
+                    video=message.video.file_id,
+                    caption=message.caption or ""
+                )
+            elif message.document:
+                await context.bot.send_document(
+                    chat_id=self.config.target_chat_id,
+                    document=message.document.file_id,
+                    caption=message.caption or ""
+                )
+            elif message.text:
+                await context.bot.send_message(
+                    chat_id=self.config.target_chat_id,
+                    text=message.text
+                )
+            else:
+                # 如果都不是，记录跳过
+                logger.info(f"消息 {message.message_id} 类型不支持，跳过")
+                return
+                
             logger.info(f"消息 {message.message_id} 已直接转发")
         except Exception as e:
             logger.error(f"转发消息失败: {e}")
