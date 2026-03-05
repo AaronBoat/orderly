@@ -124,39 +124,30 @@ class TranslationBot:
             logger.debug(f"忽略非源群组消息: {message.chat_id}")
             return
         
+        # 获取 Topic ID（如果消息在 Topic 中）
+        topic_id = message.message_thread_id
+        
+        # 总是记录 Topic ID（用于调试）
+        if topic_id:
+            logger.info(f"📌 消息来自 Topic ID: {topic_id}")
+        else:
+            logger.info(f"📌 消息不在任何 Topic 中（可能是主群组消息）")
+        
         # 检查是否来自允许的 Topic（如果配置了 allowed_topics）
         if self.config.allowed_topics_lower:
-            topic_id = message.message_thread_id
-            topic_name = None
-            
-            # 尝试获取 Topic 名称
-            if topic_id:
-                try:
-                    forum_topic = await context.bot.get_forum_topic_icon_custom_emoji_stickers(
-                        chat_id=message.chat_id
-                    )
-                    # 注意：实际的 Topic 名称获取可能需要不同的方法
-                    # 这里我们主要通过 message_thread_id 来判断
-                except:
-                    pass
-            
-            # 如果设置了 allowed_topics，检查是否匹配
-            # 可以通过 Topic ID 或从消息中获取的信息来判断
             should_process = False
             
             if topic_id:
                 # 如果配置中包含数字（Topic ID），进行匹配
                 if str(topic_id) in [str(t) for t in self.config.allowed_topics]:
                     should_process = True
-                    logger.info(f"消息来自允许的 Topic ID: {topic_id}")
-            
-            # 由于无法直接获取 Topic 名称，我们记录 Topic ID 供用户参考
-            if not should_process and topic_id:
-                logger.info(f"消息来自 Topic ID: {topic_id}，但不在允许列表中，跳过")
-                logger.info(f"如需监听此 Topic，请在 config.yaml 的 allowed_topics 中添加: {topic_id}")
-                return
-            elif not should_process and not topic_id:
-                logger.info(f"消息不在任何 Topic 中，且配置了 Topic 过滤，跳过")
+                    logger.info(f"✅ Topic ID {topic_id} 在允许列表中")
+                else:
+                    logger.info(f"❌ Topic ID {topic_id} 不在允许列表中，跳过")
+                    logger.info(f"💡 如需监听此 Topic，请在 config.yaml 的 allowed_topics 中添加: {topic_id}")
+                    return
+            else:
+                logger.info(f"❌ 消息不在任何 Topic 中，且配置了 Topic 过滤，跳过")
                 return
         
         # 去重检查
