@@ -134,7 +134,7 @@ class TranslationBot:
         # 获取 Topic ID（如果消息在 Topic 中）
         topic_id = message.message_thread_id
         
-        # 总是记录 Topic ID（用于调试）
+        # 总是记录 Topic ID（用于调试和识别需要的 Topic）
         if topic_id:
             logger.info(f"📌 消息来自 Topic ID: {topic_id}")
         else:
@@ -150,12 +150,11 @@ class TranslationBot:
                     should_process = True
                     logger.info(f"✅ Topic ID {topic_id} 在允许列表中")
                 else:
-                    logger.info(f"❌ Topic ID {topic_id} 不在允许列表中，跳过")
-                    logger.info(f"💡 如需监听此 Topic，请在 config.yaml 的 allowed_topics 中添加: {topic_id}")
-                    return
+                    logger.info(f"⏭️ Topic ID {topic_id} 不在允许列表中（监听所有 Topic 模式下仍会记录）")
+                    # 不 return，继续处理以记录所有消息
             else:
-                logger.info(f"❌ 消息不在任何 Topic 中，且配置了 Topic 过滤，跳过")
-                return
+                logger.info(f"⏭️ 消息不在任何 Topic 中（监听所有 Topic 模式下仍会记录）")
+                # 不 return，继续处理以记录所有消息
         
         # 去重检查
         if message.message_id in recent_message_ids:
