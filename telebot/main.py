@@ -55,6 +55,9 @@ class Config:
         self.gemini_api_key = config['gemini']['api_key']
         self.gemini_model = config['gemini']['model_name']
         self.language = config['settings']['language']
+        
+        # 运行模式：monitor 或 translate
+        self.mode = config['settings'].get('mode', 'translate')
 
 
 class GeminiTranslator:
@@ -163,6 +166,18 @@ class TranslationBot:
         
         logger.info(f"收到新消息 ID: {message.message_id} from Chat: {message.chat_id}")
         
+        # 记录消息内容到日志
+        if message.text:
+            logger.info(f"📝 消息文本: {message.text}")
+        elif message.caption:
+            logger.info(f"📝 消息说明: {message.caption}")
+        
+        # 检查运行模式
+        if self.config.mode == "monitor":
+            logger.info("✅ 消息已记录到日志（监听模式）")
+            return
+        
+        # 翻译模式 - 继续处理
         # 提取文本内容
         text_to_translate = None
         has_media = False
